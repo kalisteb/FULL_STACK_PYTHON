@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            form fieldset{
+                border:none;
+                width: 80%;
+            }
+            div{
+                margin: .4em 0;
+            }
+            div label{
+                width:15%;
+                float: left;
+            }
+            div textarea{
+                width: 40%;
+            }
+            #nombre, #apellido, #email, #password, #confirm_pass, #cumpleaños{
+                width: 25%;
+            }
+            #masculino, #femenino, #otro{
+                margin-right: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <h2>Mi Formulario de Registro</h2>
+                <br>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div>
+                    <label for="confirm_pass">Confirmar:</label>
+                    <input type="password" id="confirm_pass" required>
+                </div>
+                <div>
+                    <label for="cumpleaños">Cumpleaños:</label>
+                    <input type="date" id="cumpleaños" required>
+                </div>
+                <br>
+                <label for="masculino">Hombre</label>
+                <input type="radio" id="masculino" name="genero" required>
+                <label for="femenino">Mujer</label>
+                <input type="radio" id="femenino" name="genero" required>
+                <label for="otro">Otro</label>
+                <input type="radio" id="otro" name="genero" required>
+                <br><br>
+                <div>
+                    <p>Una breve descripción de ti:</p>
+                    <textarea name="description" cols="30" rows="6"></textarea>
+                </div>
+                <br>
+                <label>Lenguaje Favorito:</label>
+                <select name="lenguajefavorito">
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </body>
+</html>
