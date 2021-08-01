@@ -1,0 +1,90 @@
+Algoritmo IV
+
+
+1. Dados un array y un valor Y, cuenta e imprime (print) el número de valores del array que sean mayores que Y. 
+
+function countPrint (arr,y){
+  
+  var count=0;
+  for( var i=0;i<arr.length;i++){
+    if(y<arr[i]){
+      console.log(arr[i]);
+      count=count+1;
+    }
+  }
+  return count;
+}
+console.log(countPrint([5,8,12,16,21,50,65,78],15));
+
+Console:16,21,50,65,78,5
+
+
+
+2. Dado un array, imprime los valores máximos (max), mínimos (min) y promedio (average) para el array.
+
+function maxMinProm (arr){
+  var max=arr[0];
+  var min=arr[0];
+  var prom=0;
+  
+  for( var i=0;i<arr.length;i++){
+    if(max<arr[i]){
+      max=arr[i];
+    }
+    if(min>arr[i]){
+      min=arr[i];
+    }
+    prom=prom+arr[i];
+  }
+  prom=prom/arr.length;
+  arrnew=[max,min,prom]
+  return arrnew;
+}
+console.log(maxMinProm([5,8,12,16,21,50,65,78])); 
+
+Console: [78,5,31.875]
+
+
+3. Dado un array de números, crea una función que dé como resultado un nuevo array donde los valores negativos se reemplacen por el texto (string) ‘Dojo’. 
+Por ejemplo, reemplazarNegativos([1,2,-3,-5,5]) debiera devolver [1,2, “Dojo”, “Dojo”, 5].
+
+function reempNegat(arr){
+  for( var i=0;i<arr.length;i++){
+    if(arr[i]<0){
+      arr[i]='Dojo';
+    }
+  }
+  return arr;
+}
+console.log(reempNegat([-4,2,-3,-5,9,-25]));
+
+Console:"Dojo",2,"Dojo","Dojo",9,"Dojo"
+
+
+4.Dado un array y su respectivo índice, remueve los valores en el rango del índice dado( acortando el array). 
+Por ejemplo, removerRango([20,30,40,50,60,70],2,4)debiera devolver [20,30,70].
+
+opción 1:
+function remover(arr,x,y){
+  arr.splice(x,y-x+1)
+}
+
+console.log(remover([20,30,40,50,60,70],2,4));
+
+Console:[20,30,70]
+
+opción2:
+function remover(arr,x,y){
+  var arrnew=[];
+  for(var i=0;i<arr.length;i++){
+    if(i<x || i>y){
+      arrnew.push(arr[i]);
+    }
+  }
+  return arrnew;
+}
+console.log(remover([20,30,40,50,60,70],2,4));
+
+Console:[20,30,70]
+
+
