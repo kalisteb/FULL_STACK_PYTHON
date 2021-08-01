@@ -1,0 +1,366 @@
+*{
+    font-family: url(fonts/Open/OpenSansSerif);
+}
+.navbar{
+    text-align: left;
+    padding: 0%;
+}
+.navbar-nav{
+    text-align: left;
+    color:rgb(114, 113, 113);
+    font-weight: bolder;
+    padding: 0%;
+}
+.navbar-brand{
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 3%;
+}
+.nav-link{
+    margin-right: 7%;
+    font-size: 80%;
+    opacity: 0.8;
+}
+.container {
+    margin: 0%;
+    padding: 0%;
+}
+.descripcion{
+    background-color: rgb(245, 250, 247) ;
+    text-align: center;
+    padding: 3% 15% 3% 15%;
+    color:rgb(114, 113, 113);
+    opacity: 0.9;
+    font-size: 70%;
+    margin: 0%;
+}
+#section{
+    text-align: center;
+    margin-top: 0%;
+    padding: 4% 0% 4% 2%;
+}
+#section div{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+#section h4{
+    font-size: 100%;
+    margin-bottom: 0%;
+}
+#section p{
+    text-align: center;
+    padding: 2% 4% 0% 4%;
+    color:rgb(114, 113, 113);
+    opacity: 0.9;
+    margin-bottom: 0%;   
+    margin-top: 0%;
+    font-size: 55%;
+}
+.vision{
+    margin-left: 8%;
+}
+#article{
+    text-align: center;
+    padding: 0%;
+    margin: 0% auto;
+}
+.confer{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0%;
+}
+.metodo{
+    display: inline-block;
+    background-image: url(img/fondos/fondo.jpg);
+    text-align: center;
+    vertical-align: middle;
+    padding: 4% 5% 4% 5%;
+    color: white;
+}
+.metodo img{
+    margin-bottom: 3%;
+}
+.metodo h4{
+    margin-bottom: 5%;
+    opacity: 0.9;
+    font-size: 100%;
+}
+.metodo p{
+    text-align: center;
+    padding: 0%;
+    opacity: 0.9;
+    font-size: 55%;
+    margin: 0% auto;   
+}
+#article2{
+    padding: 5% 12% 4% 12%;
+    margin: 0%;
+    text-align: center;
+}
+#article2 h4{
+    margin-bottom: 2%;
+    font-size: 120%;
+}
+.textservicios{
+    padding: 0%;
+    font-size: 60%;
+}
+#servicio1, #servicio2, #servicio3, #servicio4, #servicio5, #servicio6{
+    text-align: center;
+    display: inline-block;
+    padding: 0% 4% 4% 4%;
+}
+#servicio1 h5, #servicio2 h5, #servicio3 h5, #servicio4 h5, #servicio5 h5, #servicio6 h5{
+    color: rgb(111, 140, 60);
+    font-size: 85%;
+    opacity: 0.9;
+    margin-bottom: 0%;
+}
+#servicio6 h5{
+    padding: 4% 0% 4% 0%;
+}
+#servicio1 p, #servicio2 p, #servicio3 p, #servicio4 p, #servicio5 p, #servicio6 p{
+    font-size: 60%;
+    margin-top: 15%;
+}
+#main{
+    background-color: rgb(111, 140, 60);
+    color: white;
+    padding: 5% 12% 6% 12%;
+}
+.titproyectos{
+    text-align: center;
+    font-size: 120%;
+    margin-bottom: 3%;
+}
+.pro1, .pro2{
+    display: inline-block;
+    padding: 0%;
+}
+.descpro1, .descpro2{
+    display: inline-block;
+}
+.descpro1 h4, .descpro2 h4{
+    font-size: 95%;
+}
+.descpro1 h5, .descpro2 h5{
+    font-size: 75%;
+}
+.descpro1 p, .descpro2 p{
+    font-size: 55%;
+}
+#section2{
+    text-align: center;
+    padding: 5% 10% 6% 10%;
+}
+.titequipo{
+    color: rgb(111, 140, 60);
+    font-size: 120%;
+}
+.equipo2 h4, .equipo3 h4{
+font-size: 95%;
+font-weight: bolder;
+margin-bottom: 5%;
+}
+.equipo2 h5, .equipo3 h5{
+font-size: 65%;
+font-weight: bolder;
+margin-bottom: 0%;
+}
+.equipo2 p, .equipo3 p{
+font-size: 55%;
+margin-bottom: 4%;
+}
+.bottom1, .bottom2{
+    margin-right: 3%;
+}
+#section3{
+    padding: 3% 10% 1% 10%;
+    background-image: url(img/fondos/fondo2.jpg);
+}
+.titblog{
+    text-align: center;
+    font-size: 110%;
+    font-weight: bolder;
+}
+.post1 h4, .post2 h4{
+font-size: 100%;
+font-weight: bolder;
+color:rgb(75, 75, 75);
+opacity: 0.9;
+text-align: left;
+margin-bottom: 0%;
+}
+.post3 h4{
+    font-size: 100%;
+    font-weight: bolder;
+    color: rgb(111, 140, 60);
+    opacity: 0.9;
+    text-align: left;
+    margin-bottom: 0%;
+    }
+.post1 h5, .post2 h5{
+    font-size: 70%;
+    font-weight: bolder;
+    color:rgb(75, 75, 75);
+    opacity: 0.9;
+    text-align: left;
+    margin-bottom: 0%;
+}
+.post3 h5{
+    font-size: 70%;
+    font-weight: bolder;
+    color: rgb(111, 140, 60);
+    opacity: 0.9;
+    text-align: left;
+    margin-bottom: 0%;
+}
+.post1 p, .post2 p{
+    font-size: 55%;
+    color:rgb(75, 75, 75);
+    opacity: 0.9;
+    text-align: left;
+}
+.post3 p{
+    font-size: 55%;
+    color: rgb(111, 140, 60);
+    opacity: 0.9;
+    text-align: left;
+}
+#section4{
+    background-color: rgb(75, 75, 75);
+    color: white;
+    opacity: 0.9;
+    padding: 5% 9%;
+    margin: 0%;
+}
+#section4 h5{
+    margin: 0%;
+    padding: 0%;
+    display: inline-block;
+    font-size: 80%;
+    text-align: left;
+    width: 70%;
+    vertical-align: top;
+}
+#section4 img{
+    text-align: right;
+    display: inline-block;
+}
+.facebook{
+    display: inline-block;
+    width: 24%;
+    border: 1px solid white;
+    padding: 1% 0% 18% 1%;
+    text-align: left;
+}
+.twitter{
+    display: inline-block;
+    width: 24%;
+    border: 1px solid white;
+    padding: 1% 0% 18% 1%;
+    text-align: left;
+}
+.linkedin{
+    display: inline-block;
+    width: 24%;
+    border: 1px solid white;
+    padding: 1% 0% 18% 1%;
+    text-align: left;
+}
+.email{
+    display: inline-block;
+    width: 24%;
+    border: 1px solid white;
+    padding: 1% 0% 18% 1%;
+    text-align: left;
+}
+#footer{
+    padding: 5% 9% 5% 9%;
+    font-size: 70%;
+    margin: 0%;
+}
+#footer div{
+    padding: 0%;
+}
+#footer h6{
+    margin-bottom: 0%;
+    margin-left: 0%;;
+    font-size: 100%;
+}
+#footer h6 span{
+    color: rgb(222, 180, 14);
+    font-weight: bolder;
+}
+#footer p{
+    text-align: right;
+    margin-bottom: 0%;
+    vertical-align: top;
+}
+#footer p span{
+    font-weight: bolder;
+}
+@media screen and (max-width:600px){
+    .navbar-brand{
+        display: none;
+    }
+    #main{
+        text-align: center;
+    }
+    .metodo{
+        padding-bottom: 10%;
+    }
+    .descpro1 h4, .descpro2 h4{
+        margin-top: 3%;
+    }
+    .post1 h4, .post2 h4, .post3 h4{
+        margin-top: 3%;
+        text-align: center;
+    }
+    .post1 h5, .post2 h5, .post3 h5{
+    text-align: center;
+    }
+    .post1 p, .post2 p, .post3 p{
+    text-align: center;
+    }
+    .post2{
+        margin-left: 10%;
+    }
+    #section4 h5{
+        font-size: 55%;
+    }
+    .facebook{
+        padding: 1% 0% 18% 0%;
+    }
+    .navbar-nav{
+        padding: 0% 0% 0% 2%;
+    }
+    #footer p{
+        margin-right: 3%;
+    }
+}
+@media screen and (min-width:601px) and (max-width:1023px){
+    #servicio1 h5, #servicio2 h5, #servicio3 h5, #servicio4 h5, #servicio5 h5, #servicio6 h5{
+        font-size: 65%;
+    }
+    .navbar-brand{
+        width: 40%;
+    }
+    #wrapper{
+        margin: 0% auto; 
+        padding-left: 9%;
+        padding-right: 9%;   
+    }
+    .navbar-nav{
+        padding: 0% 0% 0% 8%;
+        margin:0%;
+    }
+}
+@media screen and (min-width:1024px) {
+    #wrapper{
+        margin: 0% auto; 
+        padding-left: 11%;
+        padding-right: 11%;   
+    }
+}
