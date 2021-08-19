@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).prop("src",$(this).attr("data-alt-src"));
+            })
+        })
+    </script>
+    <style>
+        img, h2{
+            margin-left: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h2>De Ninja a Gato</h2>
+    <div class="container">
+        <img src="ninja0.png" data-alt-src="cat0.png" width="25%" height="auto">
+        <br>
+        <img src="ninja1.png" data-alt-src="cat1.png" width="25%" height="auto">
+        <br>
+        <img src="ninja2.png" data-alt-src="cat2.png" width="25%" height="auto">
+        <br>
+        <img src="ninja3.png" data-alt-src="cat3.png" width="25%" height="auto">
+        <br>
+        <img src="ninja4.png" data-alt-src="cat4.png" width="25%" height="auto">
+    </div>
+</body>
+</html>

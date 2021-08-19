@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('h1').css('text-align', 'center');
+
+            $('img').click(function(){
+                $(this).attr("width","300");
+            })
+            //1
+            $('#btn1').click(function(){
+                $('#p1').addClass('red');
+                $('.red').css('color','red');
+            })
+            $('#btn13').click(function(){
+                $('#p2').toggle();
+            })
+            //2
+            $('#img1').html(function(){
+                $('#img1').hide();
+            })
+            $('#btn2').click(function(){
+                $('#img1').slideToggle();
+            })   
+            //3
+            $('#btn3').click(function(){
+                $('#pappend').append('<p>This is a new paragraph</p>');
+            })   
+            //4
+            $('#btn4').click(function(){
+                $('#pslidedown').slideUp();
+                $('#img2').slideUp();
+            })
+            $('#btn5').click(function(){
+                $('#pslidedown').slideDown();
+                $('#img2').slideDown();
+            })
+            //5
+            $('#btn7').click(function(){
+                $('#pafter').after('<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex aspernatur architecto corporis quis perferendis animi distinctio, consequuntur, velit pariatur corrupti blanditiis numquam magni voluptatibus, reiciendis dolore quae id nostrum unde!</p>');
+            })
+            $('#btn6').click(function(){
+                $('#pafter').before('<img id="img7" src="mario.png" alt="" width="150px" height="auto">');
+            })
+            //6
+            $('#btn8').click(function(){
+                $('#img3').fadeOut("slow");
+                $('#img4').fadeOut("slow");
+                $('#img5').fadeOut("slow");
+            })
+            $('#btn9').click(function(){
+                $('#img3').fadeIn("slow");
+                $('#img4').fadeIn("slow");
+                $('#img5').fadeIn("slow");
+            })
+            //7
+            $('#btn10').click(function(){
+                $('#img6').hide();
+            }) 
+            $('#btn11').click(function(){
+                $('#img6').show();
+            }) 
+           //8
+            $('h2').hover(function(){
+                $('h2').text('Ingresa tus Datos');    
+            })
+            $("#btn12").click(function(){
+                alert($("input:text").val()+" el formulario fue enviado con éxito!!!");
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <h1>AddClass/Toggle</h1>
+    <button id="btn1">AddClass</button>
+    <button id="btn13">Toggle</button>
+    <p id="p1">Click the button to add class 'red' to this paragraph</p>
+    <p id="p2">Click the button to toggle a hidden and show paragraph</p>
+    <hr>
+    <h1>Slidetoggle</h1>
+    <button id="btn2">Slidetoggle</button>
+    <p>Click the button to slidetoggle a hidden image</p>
+    <img id="img1" src="visionary.jpg" alt="" width="150px" height="auto">
+    <hr>
+    <h1>Append</h1>
+    <button id="btn3">Append</button>
+    <p id="pappend">Click the button to append a new  paragraph</p>
+    <hr>
+    <h1>SlideDown/SlideUp</h1>
+    <img id="img2" src="ironcat.png" alt="" width="150px" height="auto">
+    <br>
+    <button id="btn4">SlideDown</button>
+    <button id="btn5">SlideUp</button>
+    <p id="pslidedown">Click the first button to slideDown and second button to slideUp a image</p>
+    <hr>
+    <h1>After/Before</h1>
+    <br>
+    <button id="btn6">Before</button>
+    <p id="pafter">Click the first button to append before a new image and the second button to append after a new  paragraph</p>
+    <button id="btn7">After</button>
+    <hr>
+    <h1>FadeIn/FadeOut</h1>
+    <img id="img3" src="cooler.png" alt="" width="150px" height="auto">
+    <img id="img4" src="heisencat.png" alt="" width="150px" height="auto">
+    <img id="img5" src="jean-luc-picat.jpg" alt="" width="150px" height="auto">
+    <br>
+    <button id="btn8">FadeOut</button>
+    <button id="btn9">FadeIn</button>
+    <p id="pafter">Click the first button to fadeOut a hidden the images and click the second button to fadeIn to show the images</p>
+    <hr>
+    <h1>Hide/Show</h1>
+    <img id="img6" src="cherry.jpg" alt="" width="150px" height="auto">
+    <br>
+    <button id="btn10">Hide</button>
+    <button id="btn11">Show</button>
+    <p>Click the first button to hidden image and second button to show image</p>
+    <hr>
+    <div>
+        <form action="">
+            <h2>Formulario de Contacto</h2>
+            Firstname: <input type="text" name="fname" value="Joe"><br><br>
+            Lastname: <input type="text" name="lname" value="Doe"><br><br>
+            <button id="btn12">Return the value of the first input field</button>
+        </form> 
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('img').hover(function(){
+                var temp=$(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alt-src'));
+                $(this).attr('data-alt-src', temp);
+            }, 
+            function(){
+                var temp=$(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alt-src'));
+                $(this).attr('data-alt-src', temp);
+            });
+        });
+
+    </script>
+    <style>
+        img, h2{
+            margin-left: 1%;
+        }
+        img{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cursor en/fuera</h2>
+    <div class="container">
+        <img class="img1" src="EH-205-TS_LOGO.jpg" data-alt-src="EH-209-TS_LOGO.jpg" width="15%" height="auto">
+        <img src="071M.00100.BB.jpg" data-alt-src="071M.00100.BB (2).jpg" width="15%" height="auto">
+        <img src="ABS12045180E-TS.jpg" data-alt-src="ABS12045180E-TS_2.jpg" width="15%" height="auto">
+        <img src="esl3864ts(1).jpg" data-alt-src="esl3864-2 (1).jpg" width="15%" height="auto">
+    </div>
+</body>
+</html>
