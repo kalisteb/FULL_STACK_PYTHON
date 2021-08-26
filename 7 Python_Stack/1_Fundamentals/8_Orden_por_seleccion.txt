@@ -1,0 +1,20 @@
+#1. Escribir el algoritmo para ordernar la selección
+
+arr = [50,32,2,77,25]
+
+def ordenPorSeleccion(arr):
+    for i in range(len(arr)-1):
+        menor = 0
+        for j in range(1,i+1):
+            if arr[menor] > arr[j]:
+                menor = j
+        temp = arr[i]
+        arr[i] = arr[menor]
+        arr[menor] = temp
+            
+    return arr
+
+print(ordenSeleccion(arr))
+
+
+Salida: [2, 25, 32, 50, 77]

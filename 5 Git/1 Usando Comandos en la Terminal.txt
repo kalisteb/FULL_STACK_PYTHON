@@ -1,0 +1,84 @@
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ mkdir test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ touch index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ touch styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ touch commands.txt
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ cp index.html index_2.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ cd ..
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ mkdir destino
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ mv index_2.html ../destino
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ rm styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ ls
+commands.txt  index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ cd ..
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd destino
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/destino
+$ ls
+index_2.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/destino
+$ cd ..
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ rm -rf destino
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ cat commands.txt
+Comandos de terminal
+
+~ Indica el directorio de inicio
+
+pwd Imprimir directorio de trabajo (pwd) muestra el nombre de la ruta del directorio actual
+
+cd Cambio de directorio
+
+mkdir Crear un nuevo directorio / carpeta de archivos
+
+touch Hacer un archivo nuevo
+
+.. Subir un nivel / directorio
+
+cd ~ Regresar al directorio de inicio
+
+clear Borra la información en la pantalla de visualización para proporcionar una pizarra en blanco
+
+ls La lista proporciona una lista de todos los archivos con un directorio.
+
+ls -l Muestra una lista larga verticalmente con permisos de archivo, fecha de modificación y nombre de archivo.
+
+ls -la Muestra todos los archivos
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$

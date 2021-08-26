@@ -1,0 +1,156 @@
+Git CMD
+
+C:\Users\Karina Aliste> cd C:\Users\Karina Aliste\Desktop
+
+C:\Users\Karina Aliste\Desktop>mkdir test
+
+C:\Users\Karina Aliste\Desktop>cd test
+
+C:\Users\Karina Aliste\Desktop\test>git init
+Initialized empty Git repository in C:/Users/Karina Aliste/Desktop/test/.git/
+
+C:\Users\Karina Aliste\Desktop\test>git add index.html
+
+C:\Users\Karina Aliste\Desktop\test>git add styles.css
+
+C:\Users\Karina Aliste\Desktop\test>git commit -m "archivo de inicio"
+[master (root-commit) b7f79fa] archivo de inicio
+ 2 files changed, 12 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+C:\Users\Karina Aliste\Desktop\test>git add index.html
+
+C:\Users\Karina Aliste\Desktop\test>git commit -m "actualización de html"
+[master e354b3d] actualización de html
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+C:\Users\Karina Aliste\Desktop\test>git add styles.css
+
+C:\Users\Karina Aliste\Desktop\test>git commit -m "actualización de css"
+[master 01c8914] actualización de css
+ 1 file changed, 7 insertions(+)
+
+C:\Users\Karina Aliste\Desktop\test>git log
+commit 01c8914fae3f520865d48624e37feed173c589d1 (HEAD -> master)
+Author: Karina Aliste <kalistebastias@gmail.com>
+Date:   Fri May 28 17:49:01 2021 -0400
+
+    actualización de css
+
+commit e354b3dd391dc10405012d6bef315401eef3cf21
+Author: Karina Aliste <kalistebastias@gmail.com>
+Date:   Fri May 28 17:46:16 2021 -0400
+
+    actualización de html
+
+commit b7f79fa94bb029bd291f1a49a5f7a74c35357d6c
+Author: Karina Aliste <kalistebastias@gmail.com>
+Date:   Fri May 28 17:41:11 2021 -0400
+
+    archivo de inicio
+
+C:\Users\Karina Aliste\Desktop\test>git revert -n HEAD
+
+C:\Users\Karina Aliste\Desktop\test>git revert -n 01c8914
+
+C:\Users\Karina Aliste\Desktop\test>git commit -m "revert HEAD 01c8914"
+[master ee46102] revert HEAD 01c8914
+ 1 file changed, 7 deletions(-)
+
+C:\Users\Karina Aliste\Desktop\test>git add styles.css
+
+C:\Users\Karina Aliste\Desktop\test>git commit -m "segunda actualización css"
+[master f4793b7] segunda actualización css
+ 1 file changed, 7 insertions(+)
+
+C:\Users\Karina Aliste\Desktop\test>
+
+GIT BASH
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ mkdir test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd test
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ touch index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ touch styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test
+$ git init
+Initialized empty Git repository in C:/Users/Karina Aliste/Desktop/test/.git/
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git add index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git add .
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git commit -m "archivo de inicio"
+[main (root-commit) 85e3629] archivo de inicio
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git add index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git commit -m "actualización de html"
+[main 1f28a6b] actualización de html
+ 1 file changed, 12 insertions(+)
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git add styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git commit -m "actualización de css"
+[main a356c87] actualización de css
+ 1 file changed, 4 insertions(+)
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git log
+commit a356c873d0cf8b93e80cf9e937a83d437316fc4d (HEAD -> main)
+Author: kalisteb <kalistebastias@gmail.com>
+Date:   Mon Jun 14 19:38:03 2021 -0400
+
+    actualización de css
+
+commit 1f28a6b8a7aede75a0855caf40abac23c3dfb6b0
+Author: kalisteb <kalistebastias@gmail.com>
+Date:   Mon Jun 14 19:36:30 2021 -0400
+
+    actualización de html
+
+commit 85e3629fb243b1b0edd6e3216a4e45c1f8e480de
+Author: kalisteb <kalistebastias@gmail.com>
+Date:   Mon Jun 14 19:32:21 2021 -0400
+
+    archivo de inicio
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$ git revert -n HEAD
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main|REVERTING)
+$ git revert -n a356c87
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main|REVERTING)
+$ git add styles.css
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main|REVERTING)
+$ git commit -m "segunda actualización de css"
+[main 56038a4] segunda actualización de css
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/test (main)
+$
+
+
+
+
+

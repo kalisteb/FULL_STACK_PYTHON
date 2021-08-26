@@ -1,0 +1,272 @@
+>pwd
+You are in Home.
+>ls
+ Locations: 
+WesternForest
+NorthernMeadow
+MIT
+ Items: 
+WelcomeLetter
+>cd NorthernMeadow
+You have moved to NorthernMeadow. This is a beautiful green meadow. A plump but majestic 
+pony prances happily about. 
+>pwd
+You are in NorthernMeadow.
+>ls
+ Locations: 
+EasternMountains
+ Items: 
+Pony
+>less Pnoy
+There is no Pnoy here.
+>less Pony
+You go up to the pony and attempt to ride it. It compiles and you ride the pony around in 
+circles for a bit. It then grows tired of having you as a burden and knocks you off. He 
+then looks towards the east as if suggesting that you head in that direction. 
+>cd EasternMountains
+You have moved to EasternMountains. You travel through a mountain path, which 
+eventually leads you to the entrance of a cave. Sitting right outside this cave is an 
+old man. 
+>ls
+ Locations: 
+Cave
+ Items: 
+OldMan
+OldManuscripts
+>less OldMan
+You speak with the old man. He greets you warmly as if you were old friends. You feel 
+at ease with him.  
+"Hello adventurer! Top of the morning to you! You seem like a young and energetic 
+explorer. If you're brave enough, your destiny awaits within this cave. That destiny 
+will manifest itself as a portal. Enter this portal and begin the next chapter of your 
+life." 
+The old man sees the shock on your face and smiles a comforting smile, "I am but a 
+fragile old man, and cannot accompany you through this cave, but what I can provide are 
+a few simple spells that will help you along your way. Just read my old manuscripts and 
+tryout those spells." 
+>less OldManuscripts
+If you ever forget a spell just use"help" and a list of available spells will appear. 
+If you need details on how to use a specific spell, use 'man' followed by spell 
+command. For example, if you were interested in details on how to use the "mv" spell 
+you would use: man mv 
+>cd Cave
+You have moved to Cave. It's your typical cave: dark and dank.
+>ls
+ Locations: 
+DarkCorridor
+Staircase
+>cd DarkCorridor
+You have moved to DarkCorridor. You travel through the dark corridor and find a small 
+dank room at the end. 
+>ls
+ Locations: 
+DankRoom
+>cd DankRoom
+You have moved to DankRoom. It's a musty dank room. A round boulder sits to the right 
+side of the room. 
+>ls
+ Locations: 
+SmallHole
+ Items: 
+Boulder
+>mv Boulder SmallHole
+Moved Boulder to SmallHole.
+>cd SmallHole
+You have moved to SmallHole. There's nothing exciting in the small hole, and it's 
+pretty dirty. There's no real reason to go into the hole. 
+There's nothing exciting in the small hole, and it's pretty dirty. I suggest going back 
+out. 
+>cd ..
+You have moved to DankRoom. It's a musty dank room. A round boulder sits to the right 
+side of the room. 
+>ls
+ Locations: 
+SmallHole
+Tunnel
+>cd Tunnel
+You have moved to Tunnel. It's quite moist in here.     You notice a small furry 
+movement in the corner of your vision. It's most likely a rat. A very large rat. 
+Perhaps a mongoose. At the end of the tunnel you find a stone chamber. 
+>ls
+ Locations: 
+StoneChamber
+ Items: 
+Rat
+>cd StoneChamber
+You have moved to StoneChamber. The whole rooms glows a dim green light. The source of 
+this light is a portal standing in the middle of the room. This is obviously the portal 
+of which the old man spoke. 
+>ls
+ Locations: 
+Portal
+>cd Portal
+You have moved to Portal. You have been transported through time...
+>ls
+ Locations: 
+TownSquare
+>cd TownSquare
+You have moved to TownSquare. You are in a sunny and spacious town square. There is a 
+pedestal at the center of the cobblestone turnabout, but no statue on it. The 
+architecture is charming, but everyone here seems nervous for some reason. 
+>ls
+ Locations: 
+Marketplace
+Library
+RockyPath
+ArtisanShop
+BrokenBridge
+ Items: 
+RandomCitizen1
+RandomCitizen2
+DistraughtLady
+>less RandomCitizen1
+"Excuse me," you begin. The man turns, startled. "Oh, hello! Welcome to Terminus. 
+You'll have to forgive me, but we're all a little on edge lately, what with the Dark 
+Wizard spreading corruption all along the coast.  You should be careful!" 
+>less RandomCitizen2
+The man looks up from his newspaper when he notices you staring. "Have you read this?" 
+he exclaims, shaking the latest edition of "The Last Word" in your face. "It says here 
+the wizard's corruption has spread as far as Oston to the south, and New Console is 
+completely unrecoverable! These are dangerous times," he mutters, shaking his head and 
+turning back to his reading. 
+>less DistraughtLady
+The woman is sobbing uncontrollably, her face in her hands. "My baby," she cries, "They 
+kidnapped my baby! I just know that wizard had something to do with it." 
+>cd BrokenBridge
+You have moved to BrokenBridge. A creaky wooden bridges stretches across a chasm. But 
+it's missing a Plank, and the gap is too far to jump. 
+>ls
+ Locations: 
+Clearing
+>touch Plank
+You have just created Plank
+>cd Clearing
+You have moved to Clearing. There's a small grassy clearing here, with a man sitting on 
+a stone, weeping. Behind him is a pile of rubble. 
+>ls
+ Locations: 
+OminousLookingPath
+ Items: 
+CryingMan
+>less CryingMan
+"You! You're a magic-user! I can tell, you've got that look. Come to finish the job, 
+have you? Well, go ahead, do your worst there's nothing else you can take from me. Not 
+since the rest of you were here a few days ago."  
+ 
+"What happened? You DARE to ask-- you know perfectly well what happened. Your friends, 
+the wizard's minions, destroyed my house and kidnapped my poor daughter, that's what! 
+My wife even went into town to look for help, and I haven't heard from her since!"  
+ 
+"Hm? Well, I guess it's true that you don't look like one of the wizard's minions. 
+Still, I don't trust you magicfolk. If you really are who you say you are, then prove 
+your good intentions by making me a new House!" 
+>cd OminousLookingPath
+You have moved to OminousLookingPath. The path leads toward a dark cave. It's an 
+ordinary cobblestone path, but for some reason it fills you with a sense of dread. 
+>ls
+ Locations: 
+
+ Items: 
+ThornyBrambles
+>less ThornyBrambles
+This thicket of brambles is covered with wicked-looking thorns. You can't go around it, 
+and you definitely aren't about to go through it. And yet something tells you that you 
+really want to.
+>rm ThornyBrambles
+You speak the words of the Remove spell and the brambles glimmer a deep blue. After 
+fizzling for a minute, they disappear with a puff of smoke.
+>ls
+ Locations: 
+CaveOfDisgruntledTrolls
+>cd CaveOfDisgruntledTrolls
+You have moved to CaveOfDisgruntledTrolls. The cave is dark and smells like... feet? 
+Oh, right, it's probably the trolls. There's a scared-looking kid in a cage by the far 
+wall. 
+>ls
+ Locations: 
+Cage
+Slide
+ Items: 
+UglyTroll
+UglierTroll
+AbsolutelyHideousTroll
+>less UglyTroll
+He looks mad, and really ugly.
+>rm UglyTroll
+The troll looks briefy surprised, then vanishes with an unpleasant squelching sound.
+>ls
+ Locations: 
+Cage
+Slide
+ Items: 
+UglierTroll
+AbsolutelyHideousTroll
+>rm UglierTroll
+The troll looks briefy surprised, then vanishes with an unpleasant squelching sound.
+>ls
+ Locations: 
+Cage
+Slide
+ Items: 
+AbsolutelyHideousTroll
+>rm AbsolutelyHideousTroll
+That item cannot be removed
+>mv AbsolutelyHideousTroll Cage
+Moved AbsolutelyHideousTroll to Cage.
+>cd Slide
+You have moved to Slide. The slides is long. At the end, you see the KernelFiles.
+It's just a Slide. Keep going. You're almost at the KernelFiles.
+>ls
+ Locations: 
+KernelFiles
+>cd KernelFiles
+You have moved to KernelFiles. The KernelFiles hold the sudo-secret (no, not pseudo). 
+You'd better read the Instructions. 
+>ls
+ Locations: 
+MoreKernelFiles
+ Items: 
+Certificate
+Instructions
+>less Instructions
+You've learned how to make use of your friend grep I see. If you haven't it might be 
+wise for you to go back to the Library again to do some reading. Because here, you'll 
+need to use him to help you. Here is your task:  
+There are a lot of items in the MoreKernelFiles room and one of them contains the sudo 
+password. This password is very powerful password that lets you do absolutely anything 
+in the world. It lets you cast a spell on any item that is protected in any way. You 
+know the password is contained in one of these .txt items. You know that it appears on 
+a line that says the word: 'password='. You should find it with grep's help. Then 
+you'll need to use the sudo spell to find Paradise. To do this, just Type 'sudo' before 
+the command you want to run, like so: 'sudo cp ITEM_A ITEM_B'. You will then be 
+prompted for the sudo password. Type the password, and the spell that comes after sudo 
+will be cast. If you open the Certificate in Paradise with sudo, you will have truly 
+found Paradise. 
+>cd MoreKernelFiles
+You have moved to MoreKernelFiles. There are so many files here!
+>ls
+ Locations: 
+
+ Items: 
+L_txt
+M_txt
+Q_txt
+R_txt
+S_txt
+T_txt
+U_txt
+V_txt
+W_txt
+>grep password= U_txt
+back to the table, half hoping she might find password=IHTFP another key on it, or at
+>cd ..
+You have moved to KernelFiles. The KernelFiles hold the sudo-secret (no, not pseudo). 
+You'd better read the Instructions. 
+>sudo less Certificate
+Password:
+>IHTFP
+You have correctly entered the password. You are now in Paradise. Take a look around, 
+and congratulations. 
+>ls
+ Locations: 
+There's really nothing interesting in Paradise.

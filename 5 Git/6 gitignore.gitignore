@@ -1,0 +1,18 @@
+.gitignore
+Usa esta actividad como una oportunidad para entender como usar un archivo .gitignore,
+y algunas situaciones donde te haga sentido. Comienza con un proyecto que uses para repositorio git, 
+e incluye lo siguiente.
+
+El directorio /packages
+. gitignore packages/
+
+secret.js
+.gitignore secret.js
+
+todos los archivos con extensión .txt
+.gitignore *.txt
+
+cualquier archivo que comience con "log"
+.gitignore log*
+
+Prueba tu .gitignore agregando/confirmando/empujando cuando tu archivo este completo, y observa que esos archivos no fueron empujados al remoto

@@ -1,0 +1,73 @@
+# Creé un repositorio nuevo en github
+
+# Creé un repo local también llamado basic_repo
+C:\Users\Karina Aliste\Documents\GitHub>mkdir basic_repo
+
+# Ingresé al repositorio creado
+C:\Users\Karina Aliste\Documents\GitHub>cd basic_repo
+
+# Agregué, confirmé y empujé los cambios a GitHub
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git init
+Initialized empty Git repository in C:/Users/Karina Aliste/Documents/GitHub/basic_repo/.git/
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git add .
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Trazando tus bloques/lego.html
+        new file:   Trazando tus bloques/stylelego.css
+
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git commit -m "carga de archivos html y css"
+[main (root-commit) 6ad456c] carga de archivos html y css
+ 2 files changed, 66 insertions(+)
+ create mode 100644 Trazando tus bloques/lego.html
+ create mode 100644 Trazando tus bloques/stylelego.css
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git remote add origin https://github.com/kalisteb/basic_repo.git
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 913 bytes | 114.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/kalisteb/basic_repo/pull/new/main
+remote:
+To https://github.com/kalisteb/basic_repo.git
+ * [new branch]      main -> main
+
+# Ingresé a subcarpeta
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo>cd trazando_tus_bloques
+
+# actualicé los archivos en subcarpeta
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo\Trazando_tus_bloques>git add .
+
+# agregué commit
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo\Trazando_tus_bloques>git commit -m "elimina comentarios en html"
+[main b959f1c] elimina comentarios en html
+ 3 files changed, 129 insertions(+)
+ create mode 100644 Trazando_tus_bloques/lego.html
+ create mode 100644 Trazando_tus_bloques/paso a paso.txt
+ create mode 100644 Trazando_tus_bloques/stylelego.css
+
+# agregué los cambios del repositorio local en el escritorio remoto
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo\Trazando_tus_bloques>git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.82 KiB | 207.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kalisteb/basic_repo.git
+   6ad456c..b959f1c  main -> main
+
+C:\Users\Karina Aliste\Documents\GitHub\basic_repo\Trazando_tus_bloques>

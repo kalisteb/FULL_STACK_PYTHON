@@ -1,0 +1,51 @@
+class User:
+    def __init__(self, username, email_adress):
+        self.name=username
+        self.email=email_adress
+        self.account_balance=0
+    
+    #depósitos    
+    def make_deposit(self, amount):
+        self.account_balance+=amount
+        return self
+    
+    #retiros    
+    def make_withdrawal(self, amount):
+        self.account_balance-=amount
+        return self
+    
+    #transferencias    
+    def transfer_money(self, other_user, amount):
+        if self.account_balance>amount:
+            other_user=other_user.make_deposit(amount)
+            self.make_withdrawal(amount)
+        return self
+            
+    def display_user_balance(self):
+        print("Nombre: ", self.name)
+        print("Saldo: ", self.account_balance)
+        return self
+        
+guido=User("Guido van Rossum", "guido@python.com")
+monty=User("Monty Python", "monty@python.com")
+john=User("John Doe", "john@python.com")
+
+guido.make_deposit(100).make_deposit(200).make_deposit(50).make_withdrawal(50).display_user_balance()
+monty.make_deposit(180).make_deposit(250).make_withdrawal(170).make_withdrawal(85).display_user_balance()
+john.make_deposit(500).make_withdrawal(190).make_withdrawal(45).make_withdrawal(99).display_user_balance()
+
+guido.transfer_money(john,55)
+john.display_user_balance()
+guido.display_user_balance()
+
+Consola:
+Nombre:  Guido van Rossum
+Saldo:  300
+Nombre:  Monty Python
+Saldo:  175
+Nombre:  John Doe
+Saldo:  166
+Nombre:  John Doe
+Saldo:  221
+Nombre:  Guido van Rossum
+Saldo:  245

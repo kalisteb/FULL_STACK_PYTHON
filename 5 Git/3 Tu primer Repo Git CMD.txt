@@ -1,0 +1,102 @@
+GIT CMD
+
+C:\Users\Karina Aliste> cd C:\Users\Karina Aliste\Dropbox\Proyectos
+
+C:\Users\Karina Aliste\Dropbox\Proyectos>mkdir nuevo_proyecto
+
+C:\Users\Karina Aliste\Dropbox\Proyectos>cd nuevo_proyecto
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git init
+Initialized empty Git repository in C:/Users/Karina Aliste/Dropbox/Proyectos/nuevo_proyecto/.git/
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git add index.html
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git commit -m "se agrega título y párrafo a html"
+[master (root-commit) 87ff9d9] se agrega título y párrafo a html
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>git log
+commit 87ff9d943c218c08a3d0f995b7a4658d93e960bb (HEAD -> master)
+Author: Karina Aliste <kalistebastias@gmail.com>
+Date:   Thu May 27 20:44:43 2021 -0400
+
+    se agrega título y párrafo a html
+
+C:\Users\Karina Aliste\Dropbox\Proyectos\nuevo_proyecto>
+
+GIT BASH
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ mkdir nuevo_proyecto
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop
+$ cd nuevo_proyecto
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto
+$ git init
+Initialized empty Git repository in C:/Users/Karina Aliste/Desktop/nuevo_proyect
+o/.git/
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ touch index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ git add index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ git commit -m "agregamos archivo html"
+[main (root-commit) ad59f92] agregamos archivo html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ git log
+commit ad59f922022a81e12c9bec5ad5f2052911269dd5 (HEAD -> main)
+Author: kalisteb <kalistebastias@gmail.com>
+Date:   Mon Jun 14 18:59:48 2021 -0400
+
+    agregamos archivo html
+
+Karina Aliste@LAPTOP-LN1PNGI3 MINGW64 ~/Desktop/nuevo_proyecto (main)
+$ 
