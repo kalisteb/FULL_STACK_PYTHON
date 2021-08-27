@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Api Weather">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Api Weather</title>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script src= 'script.js'></script>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section id="wrapper" class="col-lg-5 mx-auto py-5">
+            <div class="container">
+                <header class"mb-5">
+                    <h2 class="text text-center text-dark mb-4">Pronóstico del Tiempo</h2>
+                    <h3 class="text text-center text-dark mb-5">Consulte el tiempo en su ciudad</h3>
+                </header>
+                <br><br>
+                <div class="mb-5 mb-md-0" id="searchForm">
+                    <form class="form" action="">
+                        <div class="row">
+                            <div class="col-lg-2 my-3 ">
+                                <label class="form-label" required="required"><b>Ciudad</b></label>
+                            </div>
+                            <div class="col-lg-8 my-2 ">
+                                <input class="form-control" id="city" type="text" placeholder="Ingrese Ciudad">
+                            </div>
+                            <div class="col-lg-2 my-2 ">
+                                <input  type="submit" value="Consultar" class="btn btn-primary">
+                            </div>
+                        </div>
+                        <div class="row mx-auto">
+                            <div class="col-1">
+                                <input class="form-check-input" type="radio" name="units"  value="imperial" checked>
+                                <label class="form-check-label" for="units">F°</label>
+                            </div>
+                            <div class="col-1">
+                                <input class="form-check-input" type="radio" name="units" value="metric">
+                                <label class="form-check-label" for="units">C°</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br><br>
+                <div id="datos"></div>
+            </div>
+        </section>
+    </body>
+</html>
