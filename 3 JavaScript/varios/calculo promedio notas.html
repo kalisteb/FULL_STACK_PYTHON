@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="mb-3">
+        <h1>Cálculo promedio de notas</h1>
+        <br>
+        <hr>
+        Nota 1: <input id="n1" class="form-control" type="number" min="10" max="70"><br><br>
+        Nota 2: <input id="n2" class="form-control" type="number" min="10" max="70"><br><br>
+        Nota 3: <input id="n3" class="form-control" type="number" min="10" max="70"><br><br>
+        Nota 4: <input id="n4" class="form-control" type="number" min="10" max="70"><br><br>
+        Exámen <input id="exam" class="form-control" type="number" min="10" max="70"><br><br>
+        <hr>
+        <button type="button" onclick="promediar()">Promedio antes de Exámen</button>
+        <p id="promedio"></p>
+        <button type="button" onclick="npe()">Nota presentación Exámen</button>
+        <p id="npresexam"></p>
+        <button type="button" onclick="pfinal()">Promedio Final</button>
+        <p id="pfinal"></p>
+        <hr>
+        <button type="button" onclick="aprueba()">Estado del Alumno</button>
+        <p id="aprueba"></p>
+      
+        <br>
+        <script>
+            function promediar(){
+                //Definiendo las variables para guardar los números
+                var num1=0, num2=0, num3=0, num4=0, examen=0;
+                // Capturando los valores ingresados
+                num1 = document.getElementById("n1").value;
+                num2 = document.getElementById("n2").value;
+                num3 = document.getElementById("n3").value;
+                num4 = document.getElementById("n4").value;
+                examen = document.getElementById("exam").value;
+                //Multiplicando los valores
+                promedio =(parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)) / 4;
+                // Incando el lugar para imprimir la respuesta al promedio
+                document.getElementById("promedio").innerHTML="El promedio antes de Exámen es: "+promedio;   
+            }
+            function npe(){
+                var num1=0, num2=0, num3=0, num4=0, examen=0;
+                num1 = document.getElementById("n1").value;
+                num2 = document.getElementById("n2").value;
+                num3 = document.getElementById("n3").value;
+                num4 = document.getElementById("n4").value;
+                examen = document.getElementById("exam").value;
+                npresexam =(parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)) / 4 * 0.7;
+                document.getElementById("npresexam").innerHTML="La nota de presentación a Exámen es: "+npresexam;   
+            }
+            function pfinal(){
+                var num1=0, num2=0, num3=0, num4=0, examen=0;
+                num1 = document.getElementById("n1").value;
+                num2 = document.getElementById("n2").value;
+                num3 = document.getElementById("n3").value;
+                num4 = document.getElementById("n4").value;
+                examen = document.getElementById("exam").value;
+                pfinal =  (parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)) / 4 * 0.7 + (examen * 0.3);
+                document.getElementById("pfinal").innerHTML="El promedio Final es: "+pfinal;   
+            }
+            function aprueba(){
+                var num1=0, num2=0, num3=0, num4=0, examen=0;
+                num1 = document.getElementById("n1").value;
+                num2 = document.getElementById("n2").value;
+                num3 = document.getElementById("n3").value;
+                num4 = document.getElementById("n4").value;
+                examen = document.getElementById("exam").value;
+                pfinal =  (parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)) / 4 * 0.7 + (examen * 0.3);
+
+                if(num1>=40 && num2>=40 && num3>=40 && num4>=40 && pfinal>=40 ){
+                    document.getElementById("aprueba").innerHTML="Aprobado"; 
+                }
+                else{
+                    document.getElementById("aprueba").innerHTML="Reprobado"; 
+                }      
+            }
+
+        </script>
+    </div>
+</body>
+</html>
