@@ -47,14 +47,20 @@ class User(models.Model):
     password = models.CharField(max_length=20)
     cumple = models.DateTimeField()
     rol = models.PositiveIntegerField(default=1)
+    historico = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
 
 class Toque(models.Model):
     id = models.AutoField(primary_key=True)
-    emisor = models.ForeignKey(User, related_name='emisor',on_delete=models.CASCADE)
-    receptor = models.ManyToManyField(User, related_name='receptor')
+    emisor = models.ForeignKey(User,related_name='emisor',on_delete=models.CASCADE)
+    receptor = models.ManyToManyField(User,related_name='receptor')
     cantidad = models.IntegerField(default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+class Poke(models.Model):
+    id = models.AutoField(primary_key=True)
+    emisor = models.ForeignKey(User,related_name='emisor_poke',on_delete=models.CASCADE)
+    receptor = models.ForeignKey(User,related_name='receptor_poke',on_delete=models.CASCADE)
+
+    

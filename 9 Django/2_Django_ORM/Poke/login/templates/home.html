@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,45 +17,56 @@
             <!--Welcome / LogOut-->
             <div class="row d-flex mb-5">
                 <div class="col-10 d-sm-block">
-                    <h3>Welcome, {{active_user.nombre}} !</h3>
+                    <h3>Welcome, {{active_user.nombre}} ({{active_user.alias}}) !</h3>
                 </div>
                 <div class="col-2 d-flex justify-content-end">
                     <a href="/logout" class="btn btn-outline-dark">Log Out</a>
                 </div>
             </div>
             <!--people poked you-->
-            <h5>3 people poked you!</h5>
+            {% for usuario in lista_usuarios %} {% if usuario.id == active_user.id %}
+            <h5 class="mb-3"> {{usuario.historico}} people poked you!</h5>
+            {% endif %} {% endfor%}
             <!--Div Pocked you-->
-            <div class="row mb-5">
-                <div class="col-4 border border-ligth py-2 bg-light text-dark">
-                    <h6> <strong>Michael poked you 72  times</strong></h6>
-                    <h6> <strong>Damon poked you 15  times</strong></h6>
-                    <h6> <strong>Michael poked you 72  times</strong></h6>
+            <div class=" row mb-5 ">
+                <div class="col-6 border border-ligth py-2 bg-light text-dark ">
+                    {% for usuario in pokearr %}
+                    <h6><strong>{{usuario.emisor.0.nombre}} ({{usuario.emisor.0.alias}}) poked you {{usuario.total}}  times</strong></h6>
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <!--Your appointment-->
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <h5>People you may want to poke:</h5>
         </div>
-        <table class="mb-4 table table-striped table-bordered">
+        <table class="mb-4 table table-striped table-bordered ">
             <thead>
                 <tr>
-                    <th scope="col" class="col-3">Name</th>
-                    <th scope="col" class="col-1">Alias</th>
-                    <th scope="col" class="col-4">Email Address</th>
-                    <th scope="col" class="col-2">Poke History</th>
-                    <th scope="col" class="col-2">Action</th>
+                    <th scope="col " class="col-4 ">Name</th>
+                    <th scope="col " class="col-1 ">Alias</th>
+                    <th scope="col " class="col-4 ">Email Address</th>
+                    <th scope="col " class="col-2 ">Poke History</th>
+                    <th scope="col " class="col-1 ">Action</th>
                 </tr>
             </thead>
             <tbody>
-                {% for usuario in lista_usuarios %}
+                {% for usuario in lista_usuarios %} {% if usuario.id != active_user.id %}
                 <tr>
                     <td>{{usuario.nombre}}</td>
                     <td>{{usuario.alias}}</td>
                     <td>{{usuario.email}}</td>
+                    <td>{{usuario.historico}} pokes</td>
+                    <td>
+                        <form action="addpoke" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="receptor_id" value="{{usuario.id}} ">
+                            <button class="btn btn-outline-dark" type="submit" name="poke">Poke!</button>
+                            <!--<input type="submit " class="btn btn-outline-dark " name="poke " value="Poke! ">-->
+                        </form>
+                    </td>
                 </tr>
-                {% endfor%}
+                {% endif %} {% endfor%}
             </tbody>
         </table>
     </div>

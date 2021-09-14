@@ -4,7 +4,7 @@ from django.contrib import messages
 from time import gmtime, strftime
 import bcrypt
 
-from .models import User
+from .models import *
 
 # Create your views here.
 # si no existe, se debe  crear la carpeta templates en la application
@@ -65,3 +65,11 @@ def registro(request):
 def logout(request):
     request.session.flush()
     return redirect('/')
+
+def addpoke(request):
+    recept_id=request.POST['receptor_id']
+    emissor_id=request.session['user_id']
+    toque_receptor=User.objects.get(id='recept_id')
+    toque_receptor.historico +=1 #suma un toque al usuario receptor
+    #poke= Poke.objects.create(emisor=emissor_id, receptor=recept_id)
+    return render(request, 'home.html')
