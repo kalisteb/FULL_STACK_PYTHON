@@ -30,7 +30,7 @@
             <!--Div Pocked you-->
             <div class=" row mb-5 ">
                 <div class="col-6 border border-ligth py-2 bg-light text-dark ">
-                    {% for usuario in pokearr %}
+                    {% for usuario in mis_pokes %}
                     <h6><strong>{{usuario.emisor.0.nombre}} ({{usuario.emisor.0.alias}}) poked you {{usuario.total}}  times</strong></h6>
                     {% endfor %}
                 </div>

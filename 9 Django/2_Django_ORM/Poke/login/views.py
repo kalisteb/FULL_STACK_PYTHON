@@ -40,36 +40,24 @@ def registro(request):
         #encriptar password
         password = User.objects.encriptar(request.POST['password'])
         decode_hash_pw = password.decode('utf-8')
+        
+        rol = 2
+        if User.objects.all().count() ==0:
+            rol = 1
         #crear usuario
-        if request.POST['rol'] == '1':
-            user = User.objects.create(
-                nombre=request.POST['nombre'],
-                alias=request.POST['alias'],
-                email=request.POST['email'],
-                password=decode_hash_pw,
-                cumple=request.POST['cumple'],
-                rol=1,
-            )
-        else:
-            user = User.objects.create(
-                nombre=request.POST['nombre'],
-                alias=request.POST['alias'],
-                email=request.POST['email'],
-                password=decode_hash_pw,
-                cumple=request.POST['cumple'],
-                rol=2,
-            )
-        request.session['user_id'] = user.id
-    return redirect('home/')
+        user = User.objects.create(
+        nombre=request.POST['nombre'],
+        alias=request.POST['alias'],
+        email=request.POST['email'],
+        cumple=request.POST['cumple'],
+        password=decode_hash_pw,
+        rol=rol,
+        )
+        msg="Usuario creado exitosamente!"
+        messages.success(request, msg)
+        #request.session['user_id'] = user.id  #para que se logue inmediatamente
+    return redirect('/')
 
 def logout(request):
     request.session.flush()
     return redirect('/')
-
-def addpoke(request):
-    recept_id=request.POST['receptor_id']
-    emissor_id=request.session['user_id']
-    toque_receptor=User.objects.get(id='recept_id')
-    toque_receptor.historico +=1 #suma un toque al usuario receptor
-    #poke= Poke.objects.create(emisor=emissor_id, receptor=recept_id)
-    return render(request, 'home.html')
