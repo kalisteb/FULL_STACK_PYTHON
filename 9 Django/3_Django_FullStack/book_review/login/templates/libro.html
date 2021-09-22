@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dojo Read::</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/b220f12e97.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container my-5">
+    <!--Home / LogOut-->
+    <div class="container-fluid mb-5">
+        <div class="container text-right">
+            <a class="btn btn-outline-dark" href="/">Home</a> &nbsp;
+            <a href="/logout" class="btn btn-outline-dark">Logout</a>
+        </div>
+    </div>
+    <!--Libro-->
+    <h3><strong>{{libro.titulo}}</strong></h3>
+    <h4>{{libro.autor.nombre}}</h4>
+    <h5 class="mb-5">{{libro.reviewer}}</h5>
+    <div class="row d-flex mb-5">
+      <!--Reviews:-->
+      <div class="col-7">
+        <h4 class="mb-2"><strong>Reviews:</strong></h4>
+        <!--ciclo for-->
+        {% for review in reviews|slice:":3" %}
+        <hr>
+        <h6 style="display:inline;">Rating:
+          {% for i in '12345'|make_list %}
+          <!-- Si el rating es mayor o igual que i la estrella aparece llena -->
+            {% if review.rating >= forloop.counter %}
+              <h3 style="color:yellow; display:inline;">&#9733;</h3>
+            {% else %} <!-- de lo contrario la estrella aparece vacia -->
+              <h3 style="display:inline;">&#9734;</h3>
+            {% endif %}
+          {% endfor %}
+        </h6>
+        <p class="w-75 mt-2 mb-2">
+          <a href="/users/{{review.usuario.id}}"><u>{{review.usuario.nombre}}</u></a> says: <em>{{review.contenido}}</em></p>
+        <p class="mb-5"><em>{{review.updated_at}}</em></p>
+        {% endfor%}
+      </div>
+      <!--Add a Review-->
+      <div class="col-5">
+        <h5 class="mb-3">Add a Review:</h5>
+        <div class="border border-ligth py-2 px-2 bg-light text-dark">
+          <form action="{% url 'add_review' %}" method="POST">
+            {% csrf_token %}
+            <!-- <input type="hidden" value="{{request.session.user_id}}" name="user_id"> -->
+            <input type="hidden" value="{{libro.id}}" name="libro_id">
+            <!-- <input type="hidden"> -->
+            <textarea name="review" id="review" cols="53" rows="10"></textarea>
+            <fieldset>
+              <div class="row">
+                <div class="col-6">
+                  <label for=""><strong>Rating:</strong></label>
+                  <select name="rating" id="rating" class="">
+                    <option value="0" selected>Select a Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="col-2">
+                  <h6><strong>stars.</strong></h6>
+                </div>
+              </div>
+            </fieldset>
+            <div class="container text-right">
+              <input class="btn btn-outline-dark" type="submit" name="" value="Submit Review">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
