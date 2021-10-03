@@ -1,0 +1,24 @@
+{% extends 'main_content.html' %}
+{% block content %}
+<h1>Sitios</h1>
+<table class="table data">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre del dominio</th>
+        <th scope="col">Fecha de creación</th>
+        <th scope="col">Cliente</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for site in sites_list %}
+        <tr>
+            <th scope="row">{{ site.id }}</client></th>
+            <td>{{ site.domain_name }}</td>
+            <td>{{ site.created_datetime }}</td>
+            <td>{{ site.client }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

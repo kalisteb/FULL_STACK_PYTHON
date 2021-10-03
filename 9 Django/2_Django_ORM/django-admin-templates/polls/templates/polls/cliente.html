@@ -1,0 +1,26 @@
+{% extends 'main_content.html' %}
+{% block content %}
+<h1>Clientes</h1>
+<table class="table data">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for client in client_list %}
+        <tr>
+            <th scope="row">{{ client.id }}</client></th>
+            <td>{{ client.first_name }}</td>
+            <td>{{ client.last_name }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.joined_datetime }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

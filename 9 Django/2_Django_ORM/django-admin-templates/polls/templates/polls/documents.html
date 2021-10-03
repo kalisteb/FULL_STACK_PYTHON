@@ -1,0 +1,24 @@
+{% extends 'main_content.html' %}
+{% block content %}
+<h1>Sitios</h1>
+<table class="table data">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Fecha de carga</th>
+        <th scope="col">Cliente</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for document in documents_list %}
+        <tr>
+            <th scope="row">{{ document.id }}</client></th>
+            <td>{{ document.amount }}</td>
+            <td>{{ document.charged_datetime }}</td>
+            <td>{{ document.client }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'main_content.html' %}
+{% block content %}
+<h1>Clientes</h1>
+<table class="table data">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Fecha de registro</th>
+        <th scope="col">Sitio</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for lead in leads_list %}
+        <tr>
+            <th scope="row">{{ lead.id }}</client></th>
+            <td>{{ lead.first_name }}</td>
+            <td>{{ lead.last_name }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.registered_datetime }}</td>
+            <td>{{ lead.site }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'main_content.html' %}
+{% block content %}
+<h1>Editar Publicador :</h1>
+<hr />
+<form action="edit_publicador" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{publicador.0.id}}">
+    <Label>Nombre:    </Label>
+    <input type="text" value="{{publicador.0.name}}">
+    <button type="submit" class="btn btn-sm btn-outline-success">Guardar</button>
+    <hr />
+    <h3>Hay {{ lista_libros_len }}</h3>
+    <label>Libros:</label> 
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Fecha de creación</th>
+            <th scope="col">Fecha de actualización</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for libro in lista_libros %}
+            <tr>
+                <th scope="row">
+                    <input type="checkbox" name="libro-{{ libro.id }}" value="{{ libro.id }}"
+                    {% for librop in publicador.0.libros.all %}{% if librop.id == libro.id %}checked{% endif %}{% endfor %}>
+                </th>
+                <td>{{ libro.titulo }}</td>
+                <td>{{ libro.created_at }}</td>
+                <td>{{ libro.updated_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+
+{% endblock %}
