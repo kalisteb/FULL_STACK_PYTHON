@@ -36,19 +36,17 @@
                             <ins>{{lista.titulo}}</ins>
                         </h5>
                     </a>
-                    <h6>Rating: {{lista.librox.last.rating}}
-                        {% for i in '12345'|make_list %}
-                            <!-- Si el rating es mayor o igual que i la estrella aparece llena -->
-                            {% comment %} {% if lista.librox.last.rating >= forloop.counter %} {% endcomment %}
-                            {% if forloop.counter <= lista.librox.last.rating %}
-                                <h2 style="color:yellow; display:inline;">&#9733;</h2>
-                            {% else %} <!-- de lo contrario la estrella aparece vacia -->
-                                <h2 style="display:inline;">&#9734;</h2>                   
-                            {% endif %}
-                        {% endfor %}
+                    <h6>Rating: {{lista.librox.last.rating}} {% for i in '12345'|make_list %}
+                        <!-- Si el rating es mayor o igual que i la estrella aparece llena -->
+                        {% comment %} {% if lista.librox.last.rating >= forloop.counter %} {% endcomment %} {% if forloop.counter
+                        <=l ista.librox.last.rating %} <h2 style="color:yellow; display:inline;">&#9733;</h2>
+                            {% else %}
+                            <!-- de lo contrario la estrella aparece vacia -->
+                            <h2 style="display:inline;">&#9734;</h2>
+                            {% endif %} {% endfor %}
                     </H6>
                     <P class="w-75">
-                        <a href=""><u>{{lista.librox.last.usuario.alias}}</u></a> says:  <em>{{lista.librox.last.contenido}}</em></p>
+                        <a href=""><u>{{lista.librox.last.usuario.alias}}</u></a> says: <em>{{lista.librox.last.contenido}}</em></p>
                     <p class="mb-5"><em>Posted on {{lista.librox.last.updated_at}}</em></p>
                     {% endfor%}
                 </div>
