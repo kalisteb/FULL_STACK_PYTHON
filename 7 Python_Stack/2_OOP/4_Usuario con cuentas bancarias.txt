@@ -1,0 +1,62 @@
+class User:		
+    def __init__(self, name, email, cuenta):
+        self.name = name
+        self.email = email
+        self.cuenta = int(cuenta)
+        self.account = BankAccount(int_rate=0.02, balance=0)
+
+    def make_deposit(self, amount, cta):
+        self.account.cta = cta
+        self.account.balance += amount
+        print(f"Se han Depositado ${amount} a la cuenta N°{cta} del usuario {self.name}. Su saldo final es ${self.account.balance}.")
+        return self
+
+    def make_withdrawal(self, amount, cta):
+        self.account.cta = cta
+        if self.account.balance>=amount:
+            self.account.balance -= amount
+            print(f"Se han Retirado ${amount} de la cuenta N°{cta} del usuario {self.name}. Su saldo final es ${self.account.balance}.")
+        else:
+            print(f"NO Se han Retirado ${amount} de la cuenta N°{cta} del usuario {self.name}. Su saldo final es ${self.account.balance}.")
+            print(f"¡¡¡ El saldo en la cuenta es insuficiente !!! - Saldo Disponible es: ${self.account.balance}.")
+        return self
+        
+    def display_user_balance(self):
+        print("**************************")
+        print("      Balance Cuenta      ")
+        print("**************************")
+        print("Nombre   : ", self.name)
+        print("Email    : ", self.email)
+        print("Cuenta N°: ", self.cuenta)
+        print("Saldo Cuenta: ", self.account.balance)
+        print("**************************")
+        return self
+
+    def transfer_money (self, cta, other_user, other_cta, amount) :
+        self.make_withdrawal(amount,cta)
+        if self.account.balance>=amount:
+            other_user.make_deposit(amount,other_cta)
+        else:
+            print(f"NO Se han Depositado ${amount} a la cuenta N°{other_cta} del usuario {other_user.name}. Su saldo final es ${other_user.account.balance}.")
+        return self
+        
+class BankAccount:
+    def __init__(self, int_rate, balance):
+        self.int_rate = int(int_rate)
+        self.balance = int(balance)
+
+    def yield_interest(self):
+        self.balance = self.balance*(1+self.int_rate/100)
+        return self
+
+guido = User("Guido van Rossum","Guido@a.com",1)
+guido.make_deposit(300,1).make_deposit(200,1).make_deposit(40,1).make_withdrawal(100,1).display_user_balance()
+
+ana = User("Ana Gonzalez","Ana@a.com", 44345)
+guido.transfer_money(1, ana, 44345, 2000)
+ana.display_user_balance()
+guido.transfer_money(1, ana, 44345, 200)
+ana.display_user_balance()
+
+guido = User("Guido van Rossum","Guido@a.com",2)
+guido.make_deposit(500,2).make_deposit(300,2).make_deposit(40,2).make_withdrawal(50,2).display_user_balance()
