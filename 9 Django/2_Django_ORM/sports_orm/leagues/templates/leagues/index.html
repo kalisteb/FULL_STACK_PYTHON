@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<div class="container py-5">
+			<div class="container" id="all">
+				<h1>Leagues</h1>
+				<ol>
+					{% for league in leagues %}
+					<li>{{league.name}}</li>
+					{% empty %}
+					<p>No leagues found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+					{% endfor %}
+				</ol>
+				<h1>Teams</h1>
+				<ol>
+					{% for team in teams %}
+					<li>{{team.location}} {{team.team_name}}</li>
+					{% empty %}
+					<p>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+					{% endfor %}
+				</ol>
+				<h1>Players</h1>
+				<ol>
+					{% for player in players %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+					{% empty %}
+					<p>No teams found. Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+					{% endfor %}
+				</ol>
+			</div>
+			<br>
+			<br>
+			<div class="container" id="1">
+				<h1 class="">Todas las ligas de béisbol</h1>
+				<ol>
+					{% for league in baseball_league %}
+					<li>{{league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<br>
+			<br>
+			<div class="container" id="2">
+				<h1 class="">Todas las ligas Contienen Womens</h1>
+				<ol>
+					{% for league in womens_league %}
+					<li>{{league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="3">
+				<h1 class="">Todas las ligas de Hockey</h1>
+				<ol>
+					{% for league in hockeys_league %}
+					<li>{{league.name}}--{{league.sport}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="4">
+				<h1 class="">No Football</h1>
+				<ol>
+					{% for league in no_football_league %}
+					<li>{{league.name}}--{{league.sport}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="5">
+				<h1 class="">Conference</h1>
+				<ol>
+					{% for league in conference_league %}
+					<li>{{league.name}}--{{league.sport}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="6">
+				<h1 class="">Dallas teams</h1>
+				<ol>
+					{% for team in dallas_teams %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="7">
+				<h1 class="">Raptor teams</h1>
+				<ol>
+					{% for team in raptor_teams %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="8">
+				<h1 class="">City teams</h1>
+				<ol>
+					{% for team in city_teams %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="9">
+				<h1 class="">T teams</h1>
+				<ol>
+					{% for team in t_teams %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="10">
+				<h1 class="">teams_order_by_location</h1>
+				<ol>
+					{% for team in teams_order_by_location %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="11">
+				<h1 class="">teams_order_by_name</h1>
+				<ol>
+					{% for team in teams_order_by_name %}
+					<li>{{team.location}}--{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="12">
+				<h1 class="">Players Cooper</h1>
+				<ol>
+					{% for player in player_cooper %}
+					<li>{{player.first_name}}--{{player.last_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+				<h1 class="">Players Joshua</h1>
+				<ol>
+					{% for player in player_joshua %}
+					<li>{{player.first_name}}--{{player.last_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+				<h1 class="">player_cooper_no_joshua</h1>
+				<ol>
+					{% for player in player_cooper_no_joshua %}
+					<li>{{player.first_name}}--{{player.last_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+				<h1 class="">player_alexander_or_wyatt</h1>
+				<ol>
+					{% for player in player_alexander_or_wyatt %}
+					<li>{{player.first_name}}--{{player.last_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="13">
+			<h1 class="">All teams for a League</h1>
+				<ol>
+					{% for team in all_teams_Atlantic_Soccer_Conference %}
+					<li>{{team.team_name}}--{{team.league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for a Team</h1>
+				<ol>
+					{% for player in all_players_for_team %}
+					<li>{{player.first_name}}{{player.last_name}}--{{player.curr_team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for a League</h1>
+				<ol>
+				{{all_players_for_league}}
+					{% for player in all_players_for_league %}
+					<li>{{player.first_name}}{{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for a League con Last Name: Lee </h1>
+				<ol>
+				{{all_players_for_league}}
+					{% for player in all_players_for_league_last_name %}
+					<li>{{player.first_name}} {{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for a Football </h1>
+				<ol>
+					{% for player in all_players_for_Football %}
+					<li>{{player.first_name}} {{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}} --Sport:{{player.curr_team.league.sport}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Teams with Player name:Sophie </h1>
+				<ol>
+					{% for team in all_teams_with_player_name %}
+					<li>{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Leagues with Player name:Sophie </h1>
+				<ol>
+					{% for league in all_leagues_with_player_name %}
+					<li>{{league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for a League con Last Name: Lopez. Exclude  Team Roughriders</h1>
+				<ol>
+					{% for player in all_players_last_name_exclude_team %}
+					<li>{{player.first_name}} {{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Teams with Player Ethan Rogers </h1>
+				<ol>
+					{% for team in all_teams_evans %}
+					<li>{{team.team_name}}</li>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			<h1 class="">All Players for Team Roughriders (Presenta and Past)</h1>
+				<ol>
+					{% for player in all_players_team %}
+					<li>{{player.first_name}} {{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}}</li>
+						<ul>Teams:
+						{% for team in player.all_teams.all %}
+							<li>{{team.team_name}}</li>
+						{% endfor %}
+						</ul>
+					{% empty %}
+					{% endfor %}
+				</ol>
+				<h1 class="">All Players for Team Roughriders (Past)</h1>
+				<ol>
+					{% for player in past_all_players_team %}
+					<li>{{player.first_name}} {{player.last_name}}--{{player.curr_team.team_name}}--League:{{player.curr_team.league.name}}</li>
+						<ul>Teams:
+						{% for team in player.all_teams.all %}
+							<li>{{team.team_name}}</li>
+						{% endfor %}
+						</ul>
+					{% empty %}
+					{% endfor %}
+				</ol>
+				<h1 class="">All Team Past for Sophia Coleman</h1>
+				<ol>
+					<ul>Teams:
+					{% for team in all_teams_coleman_sophia %}
+						<li>{{team.team_name}}</li>
+					{% endfor %}
+					</ul>
+				</ol>
+			<h1 class="">All Players (Present and past) for a League Atlantic League of Ice Hockey</h1>
+				<ol>
+					{% for player in all_player_past_league %}
+					<li>{{player.first_name}} </li>
+						<ul>Teams:
+						{% for team in player.all_teams.all %}
+						<li>{{team.team_name}}</li>
+						{% endfor %}
+						</ul>
+					{% empty %}
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="container" id="14"></div>
+	
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+	</body>
+</html>
